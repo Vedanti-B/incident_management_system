@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: ims_db
+    ports:
+      - "5432:5432"
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
